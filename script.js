@@ -3,11 +3,7 @@ const menuButton = document.querySelector('.nav-user-icon');
 
 menuButton.addEventListener('click',()=>{
   settingsmenu.classList.toggle('settings-menu-height');
-})
-
-/*function settingsMenuToggle(){
-  settingsmenu.classList.toggle('settings-menu-height');
-};*/
+});
 
 document.addEventListener('click', (event)=>{
   /*console.log(e.target)*/
