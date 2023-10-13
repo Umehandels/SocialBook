@@ -1,8 +1,20 @@
 const settingsmenu = document.querySelector('.settings-menu');
+const menuButton = document.querySelector('.nav-user-icon');
 
-function settingsMenuToggle(){
+menuButton.addEventListener('click',()=>{
   settingsmenu.classList.toggle('settings-menu-height');
-};
+})
+
+/*function settingsMenuToggle(){
+  settingsmenu.classList.toggle('settings-menu-height');
+};*/
+
+document.addEventListener('click', (event)=>{
+  /*console.log(e.target)*/
+  if(!settingsmenu.contains(event.target) && event.target !== menuButton){
+    settingsmenu.classList.add('.settings-menu');
+  }
+})
 
 const darkBtn = document.getElementById('dark-btn');
 darkBtn.onclick =()=>{
