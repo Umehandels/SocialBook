@@ -9,10 +9,13 @@
     <script src="https://kit.fontawesome.com/a1d7a4f8ab.js" crossorigin="anonymous"></script>
   </head>
   <body>
+    <div id="preloader"></div>
 
     <nav>
         <div class="nav-left">
-          <img src="images/logo.png" class="logo">
+          <a href="index.html">
+            <img src="images/logo2.png" class="logo">
+          </a>
           <ul>
             <li><img src="images/notification.png"></li>
             <li><img src="images/inbox.png"></li>
@@ -25,11 +28,59 @@
             <img src="images/search.png">
             <input type="text" placeholder="Search">
           </div>
-          <div class="nav-user-icon online">
+          <div class="nav-user-icon online" onclick="settingsMenuToggle()">
             <img src="images/profile-pic.png">
           </div>
 
         </div>
+<!------------------- dropdown settings-menu------------------------>
+        <div class="settings-menu">
+
+          <div id="dark-btn">
+            <span>
+
+            </span>
+          </div>
+
+          <div class="settings-menu-inner">
+
+            <div class="user-profile">
+              <img src="images/profile-pic.png">
+              <div>
+                <p>John Nicholason</p>
+                <a href="profile.html">See your profile</a>
+              </div>
+            </div>
+            <hr>
+            <div class="user-profile">
+              <img src="images/feedback.png">
+              <div>
+                <p>Give Feedback</p>
+                <a href="#">Help us to improve the new design</a>
+              </div>
+            </div>
+            <hr>
+
+            <div class="settings-links">
+              <img src="images/setting.png" class="settings-icon">
+              <a href="#">Settings & Privacy <img src="images/arrow.png" width="10px"></a>
+            </div>
+            <div class="settings-links">
+              <img src="images/help.png" class="settings-icon">
+              <a href="#">Help & Support <img src="images/arrow.png" width="10px"></a>
+            </div>
+            <div class="settings-links">
+              <img src="images/display.png" class="settings-icon">
+              <a href="#">Display & Accessibility <img src="images/arrow.png" width="10px"></a>
+            </div>
+            <div class="settings-links">
+              <img src="images/logout.png" class="settings-icon">
+              <a href="#">Logout<img src="images/arrow.png" width="10px"></a>
+            </div>
+
+          </div>
+        </div>
+
     </nav>
 
     <div class="container">
@@ -101,13 +152,17 @@
         </div>
 
         <div class="post-container">
-          <div class="user-profile">
-            <img src="images/profile-pic.png">
-            <div>
-              <p>John Nicholason</p>
-              <span>June 24 2021, 13:40 pm</span>
+          <div class="post-row">
+            <div class="user-profile">
+              <img src="images/profile-pic.png">
+              <div>
+                <p>John Nicholason</p>
+                <span>June 24 2021, 13:40 pm</span>
+              </div>
             </div>
+            <a href="#"><i class="fa-solid fa-ellipsis-v"></i></a>
           </div>
+          
           <p class="post-text">Meet Jaachimma, a<span> Tech enthusiast</span> with a profound love for innovation. In the world of technology, Jaachimma's favorite realm is a place where creativity knows no bounds. Jaachimma's enthusiasm is contagious. With a keen eye for the digital frontier, Jaachimma is always on the lookout for what's next. <a href="#">#MeetJaachimma</a> <a href="#">#Tech.</a></p>
           <img src="images/feed-image-1.png" class="post-img">
 
@@ -118,11 +173,124 @@
               <div><img src="images/share.png">40</div>
             </div>
             <div class="post-profile-icon">
-              <img src="images/profile-pic.png">
+               <img src="images/profile-pic.png"> <i class="fa-solid fa-caret-down"></i>
             </div>
           </div>
         </div>
 
+        <div class="post-container">
+          <div class="post-row">
+            <div class="user-profile">
+              <img src="images/profile-pic.png">
+              <div>
+                <p>John Nicholason</p>
+                <span>June 22 2021, 3:40 am</span>
+              </div>
+            </div>
+            <a href="#"><i class="fa-solid fa-ellipsis-v"></i></a>
+          </div>
+          
+          <p class="post-text"> <span> Jaachimma</span> is a shining example of dedication and teamwork in the workplace. He's unwavering commitment to his tasks is nothing short of inspiring. Whether collaborating with colleagues or taking on individual projects, Jaachimma's positive attitude and strong work ethic shine through. He believe's that success is a collective effort, and they consistently go above and beyond to support their team. Jaachimma is a true team player, fostering an environment where everyone can thrive.<a href="#"> 🤝💼 #MeetJaachimma</a> <a href="#">#Tech.</a></p>
+          <img src="images/feed-image-2.png" class="post-img">
+
+          <div class="post-row">
+            <div class="activity-icons">
+              <div><img src="images/like.png">89</div>
+              <div><img src="images/comments.png">5</div>
+              <div><img src="images/share.png">4</div>
+            </div>
+            <div class="post-profile-icon">
+               <img src="images/profile-pic.png"> <i class="fa-solid fa-caret-down"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="post-container">
+          <div class="post-row">
+            <div class="user-profile">
+              <img src="images/profile-pic.png">
+              <div>
+                <p>John Nicholason</p>
+                <span>June 21 2021, 16:40 pm</span>
+              </div>
+            </div>
+            <a href="#"><i class="fa-solid fa-ellipsis-v"></i></a>
+          </div>
+          
+          <p class="post-text"> <span> Team Work 📊</span> Just wrapped up an incredible team project at work! It's amazing how a group of talented individuals can achieve outstanding results when they work together. 🙌
+
+          Kudos to the entire team for their hard work and dedication. Our collective efforts truly made a difference, and I'm proud to be part of such an amazing group. Looking forward to more exciting projects ahead!<a href="#"> 💼💪 #Teamwork #SuccessStory #WorkLife</a> <a href="#">#Tech.</a></p>
+          <img src="images/feed-image-3.png" class="post-img">
+
+          <div class="post-row">
+            <div class="activity-icons">
+              <div><img src="images/like.png">210</div>
+              <div><img src="images/comments.png">50</div>
+              <div><img src="images/share.png">25</div>
+            </div>
+            <div class="post-profile-icon">
+               <img src="images/profile-pic.png"> <i class="fa-solid fa-caret-down"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="post-container">
+          <div class="post-row">
+            <div class="user-profile">
+              <img src="images/profile-pic.png">
+              <div>
+                <p>John Nicholason</p>
+                <span>June 18 2021, 14:35 pm</span>
+              </div>
+            </div>
+            <a href="#"><i class="fa-solid fa-ellipsis-v"></i></a>
+          </div>
+          
+          <p class="post-text"> <span> 🌐 Tech </span> is advancing at an incredible pace, and I'm loving every moment of it! 🚀 Just had an insightful discussion about the latest developments in AI and machine learning with my colleagues. It's truly amazing to witness how these technologies are transforming industries and our everyday lives.
+          Exciting times ahead as we harness the power of innovation to solve complex problems and make the world a better place.<a href="#"> 💡💻 #TechTalk #Innovation #AI"</a> <a href="#">#Tech.</a></p>
+          <img src="images/feed-image-4.png" class="post-img">
+
+          <div class="post-row">
+            <div class="activity-icons">
+              <div><img src="images/like.png">21</div>
+              <div><img src="images/comments.png">10</div>
+              <div><img src="images/share.png">5</div>
+            </div>
+            <div class="post-profile-icon">
+               <img src="images/profile-pic.png"> <i class="fa-solid fa-caret-down"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="post-container">
+          <div class="post-row">
+            <div class="user-profile">
+              <img src="images/profile-pic.png">
+              <div>
+                <p>John Nicholason</p>
+                <span>June 18 2021, 1:00 am</span>
+              </div>
+            </div>
+            <a href="#"><i class="fa-solid fa-ellipsis-v"></i></a>
+          </div>
+          
+          <p class="post-text"> <span></span>🌍 Just returned from an unforgettable travel adventure to Nigeria. The stunning landscapes, vibrant cultures, and the incredible people I met along the way made this journey truly special. 🗺️✨
+          Traveling not only broadens the mind but also connects us with the beauty of diversity. Grateful for the memories made and the lessons learned. Until the next adventure!<a href="#"> 🌎❤️#Wanderlust #TravelDiaries #ExploringTheWorld </a> <a href="#">#Travel.</a></p>
+          <img src="images/feed-image-5.png" class="post-img">
+
+          <div class="post-row">
+            <div class="activity-icons">
+              <div><img src="images/like.png">220</div>
+              <div><img src="images/comments.png">3</div>
+              <div><img src="images/share.png">15</div>
+            </div>
+            <div class="post-profile-icon">
+               <img src="images/profile-pic.png"> <i class="fa-solid fa-caret-down"></i>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="load-more-btn">Load More</button>
 
       </div>
       <!-------------------right-sidebar------------------------>
@@ -191,5 +359,12 @@
       </div>
     </div>
 
+
+    <div class="footer">
+      <p>Copyright 2023 - Facebook Clone</p>
+    </div>
+
+
+    <script src="script.js"></script>
   </body>
 </html>
