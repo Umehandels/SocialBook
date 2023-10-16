@@ -354,6 +354,7 @@ nav{
 .activity-icons div img{
   width: 18px;
   margin-right: 10px;
+  cursor: pointer;
 }
 .activity-icons div{
   display: inline-flex;

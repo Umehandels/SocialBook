@@ -1,17 +1,37 @@
 const settingsmenu = document.querySelector('.settings-menu');
-const menuButton = document.querySelector('.nav-user-icon');
+const menuButton = document.querySelector('.js-profile-pic');
 
 menuButton.addEventListener('click',()=>{
   settingsmenu.classList.toggle('settings-menu-height');
 });
 
 document.addEventListener('click', (event)=>{
-  /*console.log(e.target)*/
   if(!settingsmenu.contains(event.target) && event.target !== menuButton){
-    settingsmenu.classList.add('.settings-menu');
+    settingsmenu.classList.remove('settings-menu-height');
   }
-})
+});
 
+/*-------like button-------*/
+let likeButton = document.querySelectorAll('.js-like-button');
+
+const sourceURLs = [
+  "images/like.png",
+  "images/like-blue.png",
+];
+
+likeButton.forEach((like) => {
+  let currentIndex = 0;
+
+  like.addEventListener("click", function () {
+    // Change the source of the clicked image based on the currentIndex
+    like.src = sourceURLs[currentIndex];
+
+    // Increment the currentIndex and wrap around if it exceeds the array length
+    currentIndex = (currentIndex + 1) % sourceURLs.length;
+  });
+});
+
+/*-------------dark Mode toggle---------*/
 const darkBtn = document.getElementById('dark-btn');
 darkBtn.onclick =()=>{
   darkBtn.classList.toggle('dark-btn-on');
